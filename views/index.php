@@ -9,13 +9,15 @@
     <body>
         <div class="container">
             <form method="POST" action="index.php">
-                <h3>Calculadora de ímpares</h3>
-                <p>Insira um número e receba uma somatoria de todos os números ímpares até o número escolhido!</p>
-                <div class="form-group">
-                    <label for="number">Digite um número</label>
-                    <input type="text" class="form-control" placeholder="Digite um número" name="number">
+                <h3 class="text-center mt-4 text-info">Calculadora de ímpares</h3>
+                <p class="text-center">Insira um número e receba uma somatória de todos os números <strong>ímpares</strong> até o número escolhido!</p>
+                <div class="form-group ml-auto mr-auto mt-4" style="width: 400px">
+                    <label for="number">Digite seu número</label>
+                    <input type="text" class="form-control" placeholder="Número" name="number">
+                    <div class="d-flex">
+                        <button type="submit" name="button" class="btn btn-sm btn-primary mt-4 ml-auto">Calcular</button>
+                    </div>
                 </div>
-                <button type="submit" name="button" class="btn btn-sm btn-primary">Calcular</button>
             </form>
         </div>
     </body>
