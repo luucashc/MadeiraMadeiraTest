@@ -6,7 +6,7 @@ class IndexController extends Controller
 {
     public function index()
     {
-        //
+        parent::index();
     }
 
     public function show(array $errors = [])
