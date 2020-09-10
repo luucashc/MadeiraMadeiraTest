@@ -8,12 +8,20 @@
     </head>
     <body>
         <div class="container">
-            <form method="POST" action="index.php">
+            <form method="POST" action="calculation.php">
                 <h3 class="text-center mt-4 text-info">Calculadora de ímpares</h3>
                 <p class="text-center">Insira um número e receba uma somatória de todos os números <strong>ímpares</strong> até o número escolhido!</p>
                 <div class="form-group ml-auto mr-auto mt-4" style="width: 400px">
                     <label for="number">Digite seu número</label>
                     <input type="text" class="form-control" placeholder="Número" name="number">
+                    <div>
+                        <?php if(!empty($errors['number_empty'])) { ?>
+                            <p><?php print $errors['number_empty']; ?></p>
+                        <?php } ?>
+                        <?php if(!empty($errors['number'])) { ?>
+                            <p><?php print $errors['number']; ?></p>
+                        <?php } ?>
+                    </div>
                     <div class="d-flex">
                         <button type="submit" name="button" class="btn btn-sm btn-primary mt-4 ml-auto">Calcular</button>
                     </div>
