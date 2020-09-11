@@ -2,6 +2,8 @@
 
 namespace Controller;
 
+use Model\Calculation;
+
 class CalculationController extends Controller
 {
     public function show(array $errors = array())
@@ -29,5 +31,10 @@ class CalculationController extends Controller
 
     public function process()
     {
+        $number = Calculation::calculation(trim($_POST['number']));
+
+        header('Location: /index.php');
+
+        exit;
     }
 }
