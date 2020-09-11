@@ -17,3 +17,5 @@ After the composer is installed, run the project with:
 ```
 $ php -S localhost:8000 public/index.php
 ```
+
+Access ```localhost:8000``` in your browser.
