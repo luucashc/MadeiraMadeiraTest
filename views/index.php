@@ -15,16 +15,18 @@
                     <label for="number">Digite seu número</label>
                     <input type="text" class="form-control" placeholder="Número" name="number">
                     <div>
-                        <?php if(!empty($errors['number_empty'])) { ?>
-                            <p><?php print $errors['number_empty']; ?></p>
-                        <?php } ?>
-                        <?php if(!empty($errors['number'])) { ?>
-                            <p><?php print $errors['number']; ?></p>
-                        <?php } ?>
+                        <p class="text-danger m-0">
+                            <?php echo !empty($errors['number_empty']) ? $errors['number_empty'] : ""; ?>
+                            <br>
+                            <?php echo !empty($errors['number']) ? $errors['number'] : ""; ?>
+                        </p>
                     </div>
                     <div class="d-flex">
                         <button type="submit" name="button" class="btn btn-sm btn-primary mt-4 ml-auto">Calcular</button>
                     </div>
+                </div>
+                <div class="">
+                    <h5 class="text-center mt-5">Resultado: <?php echo !empty($_GET['calculation']) ? $_GET['calculation'] : "Nenhum calculo realizado."; ?></h5>
                 </div>
             </form>
         </div>
