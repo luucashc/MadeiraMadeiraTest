@@ -2,6 +2,11 @@
 
 namespace Controller;
 
+/**
+ * [abstract description]
+ * 
+ * @var [type]
+ */
 abstract class Controller
 {
     public function index()

@@ -2,6 +2,10 @@
 
 namespace Controller;
 
+/**
+ * [IndexController description]
+ *
+ */
 class IndexController extends Controller
 {
     public function index()

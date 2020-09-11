@@ -4,6 +4,11 @@ namespace Controller;
 
 use Model\Calculation;
 
+
+/**
+ * [CalculationController description]
+ * 
+ */
 class CalculationController extends Controller
 {
     public function show(array $errors = array())
@@ -33,7 +38,7 @@ class CalculationController extends Controller
     {
         $number = Calculation::calculation(trim($_POST['number']));
 
-        header('Location: /index.php');
+        header('Location: /index.php?calculation=' . ($number));
 
         exit;
     }
