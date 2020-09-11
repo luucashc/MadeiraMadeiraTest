@@ -12,6 +12,7 @@ $ composer install
 ```
 
 After the composer is installed, run the project with:
+(Make sure you have PHP installed on your machine)
 
 ```
 $ php -S localhost:8000 public/index.php
