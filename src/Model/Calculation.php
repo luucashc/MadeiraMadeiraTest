@@ -3,8 +3,8 @@
 namespace Model;
 
 /**
- * [Calculation description]
- * 
+ * Class to perform the calculation of the numbers.
+ *
  */
 class Calculation
 {

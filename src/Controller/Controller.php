@@ -3,21 +3,20 @@
 namespace Controller;
 
 /**
- * [abstract description]
- * 
- * @var [type]
+ * Abstract Controller para tratar o request.
+ *
  */
 abstract class Controller
 {
     public function index()
     {
-        if($_SERVER['REQUEST_METHOD'] == 'POST') {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             if($form_errors = $this->validate()) {
                 $this->show($form_errors);
-            }else {
+            } else {
                 $this->process();
             }
-        }else {
+        } else {
             $this->show();
         }
     }

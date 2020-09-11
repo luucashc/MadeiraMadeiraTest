@@ -3,25 +3,20 @@
 namespace Controller;
 
 /**
- * [IndexController description]
+ * Initial controller.
  *
  */
 class IndexController extends Controller
 {
-    public function index()
+    public function validate(): array
     {
-        parent::index();
+        return [];
     }
 
     public function show(array $errors = [])
     {
         /* Show index */
         include BASE_PATH . '/views/index.php';
-    }
-
-    public function validate(): array
-    {
-        return [];
     }
 
     public function process()
