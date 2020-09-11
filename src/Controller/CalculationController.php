@@ -32,6 +32,7 @@ class CalculationController extends Controller
 
     public function show(array $errors = array())
     {
+        include BASE_PATH . '/views/index.php';
     }
 
     public function process()
