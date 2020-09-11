@@ -6,16 +6,12 @@ use Model\Calculation;
 
 
 /**
- * [CalculationController description]
- * 
+ * Controller to check for errors and if they are not found,
+ * return the call result to the Calculation model.
+ *
  */
 class CalculationController extends Controller
 {
-    public function show(array $errors = array())
-    {
-        include BASE_PATH . '/views/index.php';
-    }
-
     /* creating array with validations */
     public function validate(): array
     {
@@ -34,12 +30,14 @@ class CalculationController extends Controller
         return $errors;
     }
 
+    public function show(array $errors = array())
+    {
+    }
+
     public function process()
     {
-        $number = Calculation::calculation(trim($_POST['number']));
+        $calculation = Calculation::calculation(trim($_POST['number']));
 
-        header('Location: /index.php?calculation=' . ($number));
-
-        exit;
+        include BASE_PATH . '/views/index.php';
     }
 }

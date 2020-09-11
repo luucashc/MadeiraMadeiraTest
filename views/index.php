@@ -10,7 +10,7 @@
         <div class="container">
             <form method="POST" action="calculation.php">
                 <h3 class="text-center mt-4 text-info">Calculadora de ímpares</h3>
-                <p class="text-center">Insira um número e receba uma somatória de todos os números <strong>ímpares</strong> até o número escolhido!</p>
+                <p class="text-center">Insira um número e receba a somatória de todos os números <strong>ímpares</strong> até o número escolhido!</p>
                 <div class="form-group ml-auto mr-auto mt-4" style="width: 400px">
                     <label for="number">Digite seu número</label>
                     <input type="text" class="form-control" placeholder="Número" name="number">
@@ -22,11 +22,11 @@
                         </p>
                     </div>
                     <div class="d-flex">
-                        <button type="submit" name="button" class="btn btn-sm btn-primary mt-4 ml-auto">Calcular</button>
+                        <button type="submit" name="button" class="btn btn-sm btn-primary ml-auto">Calcular</button>
                     </div>
                 </div>
                 <div class="">
-                    <h5 class="text-center mt-5">Resultado: <?php echo !empty($_GET['calculation']) ? $_GET['calculation'] : "Nenhum calculo realizado."; ?></h5>
+                    <h5 class="text-center mt-5">Resultado: <?php echo !empty($calculation) ? $calculation : "Nenhum calculo realizado."; ?></h5>
                 </div>
             </form>
         </div>
